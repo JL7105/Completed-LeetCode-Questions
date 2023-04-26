@@ -1,0 +1,14 @@
+class Solution {
+    public int[] buildArray(int[] nums) {
+        //Create a new array "ans" with the same length as the inputted array.
+        int[] ans = new int[nums.length];
+
+        //Iterate through each integer of the inputted array with a for loop.
+        for (int i = 0; i < nums.length; i++) {
+            //Assign each slot of the new array with the premutation of the inputted array.
+            ans[i] = nums[nums[i]];
+        }
+        //Return new array
+        return ans;
+    }
+}
