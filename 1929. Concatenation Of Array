@@ -1,0 +1,20 @@
+class Solution {
+    public int[] getConcatenation(int[] nums) {
+
+        //Create a new array named ans that is twice the length of inputted array.
+        int[] ans = new int[nums.length * 2];
+
+        //Create for loop to iterate through every integer of inputted array.
+        for (int i = 0; i < nums.length; i++) {
+        
+            //For every integer of inputted array, the new array will copy the same integer to the same position.
+            ans[i] = nums[i];
+            
+            //For every integer of inputted array, the new array will also span to the first empty spot outside the boundaries of the inputted array to place that same integer of the original position of the inputted array to eventually concatenate two of the inputted array put together.
+             ans[i + nums.length] = nums[i];
+        }
+        
+        //Return the newly concatenated array.
+        return ans;
+    }
+}
