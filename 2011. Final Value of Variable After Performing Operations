@@ -1,0 +1,26 @@
+class Solution {
+    public int finalValueAfterOperations(String[] operations) {
+
+        //Initialize int x as 0 for the total count
+        int x = 0;
+
+        //Create for loop to iterate through each string
+        for (int i = 0; i < operations.length; i++) {
+
+            //Use Java's .contains method to see if there is a minus in the string
+            if (operations[i].contains("-")) {
+
+                //If there is, subtract 1 from x
+                x--;
+                
+            } else {
+
+                //If there isn't, add 1 to x
+                x++;
+            }
+        }
+
+        //Return the total.
+        return x;
+    }
+}
